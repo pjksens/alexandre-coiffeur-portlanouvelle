@@ -567,6 +567,18 @@
     .mobile-menu.open { display: flex; }
     .mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--ink); transition: color 0.2s; }
     .mobile-menu a:hover { color: var(--blue); }
+    .mobile-menu .mobile-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--blue);
+      color: var(--white);
+      padding: 1.05rem 2.6rem;
+      margin-top: 1rem;
+    }
+    .mobile-menu .mobile-cta:hover { color: var(--white); opacity: 0.85; }
     .mobile-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; font-size: 1.2rem; color: var(--light); cursor: pointer; }
 
     /* ── REVEAL ── */
@@ -656,6 +668,7 @@
     <a href="#horaires" onclick="closeMob()">Horaires</a>
     <a href="#avis"    onclick="closeMob()">Avis</a>
     <a href="#contact" onclick="closeMob()">Contact</a>
+    <a href="https://www.planity.com/alexandre-coiffure-11210-port-la-nouvelle" target="_blank" rel="noopener noreferrer" class="mobile-cta" onclick="closeMob()">Réserver en ligne</a>
   </div>
 
   <!-- NAV -->
