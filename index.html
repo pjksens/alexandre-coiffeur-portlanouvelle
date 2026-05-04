@@ -346,14 +346,16 @@
     .tarifs-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--rule);
+      gap: 0;
+      background: var(--white);
       align-items: start;
     }
     .tarif-cat {
       background: var(--white);
       padding: 2.5rem 2rem;
+      border-right: 1px solid var(--rule);
     }
+    .tarif-cat:last-child { border-right: none; }
     .tarif-cat-title {
       font-size: 0.7rem;
       font-weight: 500;
@@ -587,6 +589,8 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .tarifs-grid { grid-template-columns: 1fr 1fr; }
+      .tarif-cat:nth-child(2) { border-right: none; }
+      .tarif-cat:last-child { border-top: 1px solid var(--rule); }
     }
 
     @media (max-width: 960px) {
@@ -613,6 +617,8 @@
 
       .about-img { aspect-ratio: 16/9; }
       .tarifs-grid { grid-template-columns: 1fr; }
+      .tarif-cat { border-right: none; border-bottom: 1px solid var(--rule); }
+      .tarif-cat:last-child { border-bottom: none; border-top: none; }
       .tarifs-intro { flex-direction: column; align-items: flex-start; gap: 1rem; }
 
       .hours-right { padding: 2rem; }
@@ -764,7 +770,7 @@
       <div class="tarifs-intro reveal">
         <div>
           <p class="eyebrow">Tarifs</p>
-          <h2>Nos <em>prestations</em></h2>
+          <h2>Mes <em>prestations</em></h2>
           <div class="rule-short"></div>
         </div>
         <p class="tarifs-note">Certaines prestations sur devis.<br/>Réservation en ligne via Planity.</p>
@@ -890,7 +896,7 @@
       <div class="reviews-head reveal">
         <div>
           <p class="eyebrow">Témoignages</p>
-          <h2>Ce que disent<br/><em>nos clients</em></h2>
+          <h2>Ce que disent<br/><em>mes clients</em></h2>
         </div>
         <div class="rating-chip">
           <span class="rating-num">4,4</span>
